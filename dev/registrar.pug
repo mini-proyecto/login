@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Registrar
+    body
+        h1 Registrar
+        form(action="registrar.php", method="post")
+            label(for="nombre") Nombre
+            input(type="text" name="nombre" id="nombre")
+            label(for="apellidos") Apellidos
+            input(type="text" name="apellidos" id="apellidos")
+            label(for="username") Nombre de usuario
+            input(type="text" name="username" id="username")
+            label(for="clave") Clave
+            input(type="password" name="clave" id="clave")
+            button(type="submit") Registrar
