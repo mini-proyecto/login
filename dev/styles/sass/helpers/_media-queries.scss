@@ -1,9 +1,9 @@
 @mixin querie($version){
-	$desktop          : "(max-width: 920px)";
-	$tablet           : "(max-width: 850px)";
-	$mobile-normal    : "(max-width: 670px)";
-	$mobile-medium    : "(max-width: 520px)";
-	$mobile-small  	  : "(max-width: 400px)";
+	$desktop         : "(max-width: 920px)";
+	$tablet          : "(max-width: 850px)";
+	$mobileNormal    : "(max-width: 670px)";
+	$mobileMedium    : "(max-width: 520px)";
+	$mobileSmall  	 : "(max-width: 400px)";
 
 
 	@if $version == "desktop" {
@@ -16,18 +16,18 @@
 			@content;
 		}	
 	}
-	@else if $version == "mobile-normal"{
-		@media screen and #{$mobile-basic}{
+	@else if $version == "mobileNormal"{
+		@media screen and #{$mobileNormal}{
 			@content;
 		}	
 	}
-	@else if $version == "mobile-medium"{
-		@media screen and #{$mobile}{
+	@else if $version == "mobileMedium"{
+		@media screen and #{$mobileMedium}{
 			@content;
 		}	
 	}
-	@else if $version == "mobile-small"{
-		@media screen and #{$mobile-small}{
+	@else if $version == "mobileSmall"{
+		@media screen and #{$mobileSmall}{
 			@content;
 		}	
 	}

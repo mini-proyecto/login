@@ -1,0 +1,85 @@
+@import '../helpers/_colors';
+@import '../helpers/_tipography';
+@import '../helpers/_gutters';
+@import '../helpers/_media-queries';
+
+.container-form{
+	margin-top: $gutter-grid;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0 $gutter-d;
+	max-width: 600px;
+	@include querie(mobileNormal){
+		width: auto;
+		padding: 0 $gutter-r ;
+	}
+}
+
+.form, .form__item{
+	display: flex;
+	flex-direction: column;
+}
+.title{
+	text-align: center;
+	font-size: $t2;
+	color: $textColor;
+}
+
+.form__label{
+	margin-bottom: $gutter-r;
+	font-size: $t5;
+	color: $textColor;
+	
+}
+
+.form__input{
+	background-color: #fff;
+	border: 1px solid $borderColor;
+	padding: ($gutter-r) - 2;
+	border-radius: 3px;
+	margin-bottom: $gutter-r;
+	outline: none;
+	&:last-of-type{
+		margin-bottom: $gutter-grid;
+	}
+	&:focus{
+		border: 1px solid $accentColor;
+		box-shadow: 0 0 10px -2px $accentColor;
+	}
+}
+.button-login{
+	margin-bottom: $gutter-grid;
+	padding: $gutter-r;
+	border: none;
+	border-radius: 3px;
+	color: #fff;
+	font-size: $t5;
+	background-color: $firstColor;
+	&:hover{
+		background-color: $firstColorAlt;
+		cursor: pointer;
+	}
+}
+
+.p3{
+	font-size: $t5;
+	a{
+		position: relative;
+		font-size: $t5;
+		color: $thirdColor;
+		text-decoration: none;
+		&:before{
+			content: "";
+			position: absolute;
+			bottom: -3px;
+			left: 0;
+			width: 0;
+			height: 2px;
+			background-color: $thirdColorAlt;
+			transition: .3s all;
+		}
+		&:hover::before{
+			width: 100%;
+		}
+	}
+}
