@@ -4,14 +4,16 @@
 @import '../helpers/_media-queries';
 
 .container-form{
-	margin-top: $gutter-grid;
+	margin-top: $gutter-grid*3;
 	margin-right: auto;
 	margin-left: auto;
 	padding: 0 $gutter-d;
 	max-width: 600px;
+	width: 600px;
 	@include querie(mobileNormal){
 		width: auto;
-		padding: 0 $gutter-r ;
+		padding: ($gutter-r) - 5;
+		margin-top: $gutter-grid;
 	}
 }
 
@@ -20,6 +22,7 @@
 	flex-direction: column;
 }
 .title{
+	margin-bottom: $gutter-grid;
 	text-align: center;
 	font-size: $t2;
 	color: $textColor;
@@ -40,7 +43,7 @@
 	margin-bottom: $gutter-r;
 	outline: none;
 	&:last-of-type{
-		margin-bottom: $gutter-grid;
+		margin-bottom: $gutter-grid*2;
 	}
 	&:focus{
 		border: 1px solid $accentColor;
@@ -66,7 +69,7 @@
 	a{
 		position: relative;
 		font-size: $t5;
-		color: $thirdColor;
+		color: $accentColor;
 		text-decoration: none;
 		&:before{
 			content: "";
@@ -75,11 +78,17 @@
 			left: 0;
 			width: 0;
 			height: 2px;
-			background-color: $thirdColorAlt;
+			background-color: $accentColorAlt;
 			transition: .3s all;
+			@include querie(tablet){
+				display: none;
+			}
 		}
 		&:hover::before{
 			width: 100%;
+		}
+		@include querie(tablet){
+			text-decoration: underline;
 		}
 	}
 }
