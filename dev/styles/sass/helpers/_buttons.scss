@@ -1,0 +1,31 @@
+@import '_colors';
+@import '_gutters';
+@import '_tipography';
+
+@mixin buttonSubmit{
+	margin-bottom: $gutter-grid;
+	padding: $gutter-r;
+	border: none;
+	border-radius: 3px;
+	color: #fff;
+	font-size: $t5;
+	background-color: $firstColor;
+	&:hover{
+		background-color: $firstColorAlt;
+		cursor: pointer;
+	}
+}
+
+@mixin buttonCta{
+	margin-bottom: $gutter-grid;
+	padding: $gutter-r;
+	border: none;
+	border-radius: 3px;
+	color: #fff;
+	font-size: $t5;
+	background-color: $accentColor;
+	&:hover{
+		background-color: $accentColorAlt;
+		cursor: pointer;
+	}
+}

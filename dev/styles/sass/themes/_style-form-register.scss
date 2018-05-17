@@ -1,0 +1,24 @@
+@import '../helpers/buttons';
+@import '../helpers/_gutters';
+@import '../helpers/_tipography';
+@import '../helpers/_media-queries';
+@import '../helpers/_colors';
+
+.title{
+	margin-bottom: $gutter-grid;
+	text-align: center;
+	font-size: $t2;
+	color: $textColor;
+}
+
+.form__input{
+	&:focus{
+		border: 1px solid $firstColor;
+		box-shadow: 0 0 10px -4px $firstColor;
+	}
+}
+.button-register{
+	@include buttonCta;
+	margin-top: $gutter-grid*2;
+}
+

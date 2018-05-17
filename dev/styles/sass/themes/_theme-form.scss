@@ -1,0 +1,43 @@
+@import '../helpers/_colors';
+@import '../helpers/_tipography';
+@import '../helpers/_gutters';
+@import '../helpers/_media-queries';
+
+.container-form{
+	margin-top: $gutter-grid*3;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0 $gutter-d;
+	max-width: 600px;
+	width: 600px;
+	@include querie(mobileNormal){
+		width: auto;
+		padding: ($gutter-r) - 5;
+		margin-top: $gutter-grid;
+	}
+}
+.form, .form__item{
+	display: flex;
+	flex-direction: column;
+}
+.form__label{
+	margin-bottom: $gutter-r;
+	font-size: $t5;
+	color: $textColor;
+	
+}
+.form__input{
+	background-color: #fff;
+	border: 1px solid $borderColor;
+	padding: ($gutter-r) - 2;
+	border-radius: 3px;
+	margin-bottom: $gutter-r;
+	outline: none;
+	&:last-of-type{
+		margin-bottom: $gutter-grid*2;
+	}
+	&:focus{
+		border: 1px solid $accentColor;
+		box-shadow: 0 0 10px -4px $accentColor;
+	}
+}
