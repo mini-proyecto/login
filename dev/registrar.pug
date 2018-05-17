@@ -13,12 +13,12 @@ html(lang="es")
 			form(action="registrar.php", method="post" class="form")
 				div(class="form__item")
 					label(for="nombre" class="form__label") Nombre
-					input(type="text" name="nombre" id="nombre" class="form__input")
+					input(type="text" name="nombre" id="nombre" class="form__input" required)
 					label(for="apellidos" class="form__label") Apellidos
-					input(type="text" name="apellidos" id="apellidos" class="form__input")
+					input(type="text" name="apellidos" id="apellidos" class="form__input" required)
 					label(for="username" class="form__label") Nombre de usuario
-					input(type="text" name="username" id="username" class="form__input")
+					input(type="text" name="username" id="username" class="form__input" required)
 					label(for="clave" class="form__label") Clave
-					input(type="password" name="clave" id="clave" class="form__input")
+					input(type="password" name="clave" id="clave" class="form__input" required)
 
 					input(type="submit" value="Registrar" class="button-register")
